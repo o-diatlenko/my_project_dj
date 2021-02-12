@@ -16,7 +16,7 @@ class Question(models.Model):
 
 
 class Choice(models.Model):
-    question = models.ForeignKey(to=Question, on_delete=models.CASCADE)
+    question = models.ForeignKey(to=Question, on_delete=models.CASCADE)  # many to one, many choices -> one question
     choice_text = models.CharField(max_length=200)
     votes = models.IntegerField(default=0)
 
